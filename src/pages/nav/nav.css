@@ -1,0 +1,8 @@
+.navbar .nav-hover{
+    color:  white ;
+   
+}
+.navbar .nav-hover:hover {
+    color: red; 
+   
+  }

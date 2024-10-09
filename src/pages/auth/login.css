@@ -1,0 +1,29 @@
+.back-image{
+    background-image: url("./geometric-gradient-technology-background_23-2149110132.avif");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.pa{
+    position: relative;
+    top: 100px;
+    left: 40%;
+    width: 20%;
+    min-height: 200px;
+    background-color: rgba(224, 224, 224, 0.7); 
+    border-radius: 30px;
+    box-shadow: 0  0 0 10px;
+    padding-bottom: 20px;
+  }
+  .forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ff{
+    margin-bottom: 10px ;
+  }
+
+  
