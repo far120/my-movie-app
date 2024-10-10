@@ -4,14 +4,14 @@ import "./authnav.css";
 export default function Nav() {
   const navigate = useNavigate();
   function logout() {
-    window.localStorage.removeItem("sign");
+    window.localStorage.removeItem("token");
   
   }
   return (
     <nav className="navbar navbar-dark bg-dark nav">
       <div className="auth-nav">
         <form className="d-flex gap-3">
-          {!window.localStorage.getItem("sign") ? (
+          {!window.localStorage.getItem("token") ? (
             <>
               <Link className="navbar-brand nav-hover" to="/signup">
                 <button className="btn btn-outline-primary p-3" type="button">Signup</button>
