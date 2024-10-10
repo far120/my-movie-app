@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 export default function Home() {
     const [movie, setmovie] = useState([]);
-    const [id, setId] = useState(2);
+    const [id, setId] = useState(1);
     const path = window.location.href;
     const category = path.split("?")[0];
     const page = path.split("?")[1]?.split("=")[1];
