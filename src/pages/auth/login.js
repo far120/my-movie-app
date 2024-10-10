@@ -30,7 +30,7 @@ export default function SignUp() {  // Changed the function name to be consisten
         var flag = true;
         e.preventDefault();
         setaccept(true);
-        if (password.length < 8 || !show || email!= "admin@admin.com" || password!="123456789") {
+        if (password.length < 8 || !show || email != "admin@admin.com" || password!="123456789") {
             flag = false;
         } else {
             flag = true;
