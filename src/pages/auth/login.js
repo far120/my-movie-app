@@ -96,6 +96,7 @@ export default function Login() {
         .then((response) => {
             alert("Success ")
             navigate('/'); 
+            window.localStorage.setItem("token", response.data.token);
         })
         .catch((error) => {
             alert(error.response.data)
