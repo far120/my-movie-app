@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./movieid.css";
+import { Link } from "react-router-dom";
 
 export default function Movieid() {
     const id = window.location.pathname.split('/').slice(-1)[0];
@@ -12,6 +13,7 @@ export default function Movieid() {
             .then(data => {
                 console.log(data);
                 setData(data);
+                console.log(data);
             })
             .catch(err => {
                 console.error("Error: " + err);
@@ -34,6 +36,7 @@ export default function Movieid() {
                 height="280" 
             /> 
             <h2>{data.title}</h2>
+            <Link to={data.homepage}><button className="btn btn-primary" style={{alignSelf:"center"}}>watch film</button></Link>
             <p>{data.overview}</p>
             <h3>Rating: {data.vote_average}</h3>
             <h3>Release Date: {data.release_date}</h3>

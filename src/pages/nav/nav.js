@@ -3,9 +3,10 @@ import "./nav.css";
 import AuthNav from "../auth/auth-nav";
 
 export default function nav(){
- 
+
     return(           
       <>
+
         
     <div className="d-grid">
     <div class="collapse" id="navbarToggleExternalContent">
@@ -35,7 +36,7 @@ export default function nav(){
             <Link  to="/animes" className="navbar-brand nav-hover">Animes</Link>
           </div>
           <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <input className="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-success" type="submit"><i className="fas fa-search"></i></button>
           </form>
         </div>
