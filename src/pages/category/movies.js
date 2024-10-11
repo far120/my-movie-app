@@ -87,11 +87,17 @@ if(!movie || !movie.length===0){
       (
         null
     )}
-    
+    { id == last ?(
+            <li class="page-item"><button class="page-link"  onClick={()=>handelid(last)}>Last</button></li>
+    ):
+(
+    <>
     <li class="page-item"><button class="page-link" style={{textDecoration:"underline"}}  onClick={()=>handelid(id)}>{id}</button></li>
     <li class="page-item"><button class="page-link"  onClick={()=>handelid(id+1)}>{id+1}</button></li>
     <li class="page-item"><button class="page-link"  onClick={()=>handelid(id+1)}>Next</button></li>
     <li class="page-item"><button class="page-link"  onClick={()=>handelid(last)}>Last</button></li>
+    </>
+)}
   </ul>
 </nav>
           </div>
