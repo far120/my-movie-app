@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 export default function Home() {
     const first = 1;
-    const last = 52;
+    const last = 500;
     const [movie, setmovie] = useState([]);
     const [id, setId] = useState(1);
     const path = window.location.href;
@@ -73,8 +73,8 @@ if(!movie || !movie.length===0){
 
           </div>
           <nav aria-label="Page navigation example" style={{display:"flex" , alignItems:"center" , justifyContent:"center"}}>
-        <li class="page-item"><button class="page-link"  onClick={()=>handelid(first)}>First</button></li>
   <ul class="pagination" >
+  <li class="page-item"><button class="page-link"  onClick={()=>handelid(first)}>First</button></li>
     { id > 1 ?(
     <li class="page-item"><button class="page-link"  onClick={()=>handelid(id-1)}>Previous</button></li>
     ):
@@ -87,6 +87,7 @@ if(!movie || !movie.length===0){
       (
         null
     )}
+    
     <li class="page-item"><button class="page-link" style={{textDecoration:"underline"}}  onClick={()=>handelid(id)}>{id}</button></li>
     <li class="page-item"><button class="page-link"  onClick={()=>handelid(id+1)}>{id+1}</button></li>
     <li class="page-item"><button class="page-link"  onClick={()=>handelid(id+1)}>Next</button></li>
