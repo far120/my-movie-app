@@ -9,23 +9,10 @@ export default function SignUp() {  // Changed the function name to be consisten
     var [password, setpassword] = useState("");
     const [accept, setaccept] = useState(false);
 
-    function he(e) {
+    function handelemail(e) {
         setemail(e.target.value);
     }
-    // useEffect(() => {
-    //     fetch("")
-    //         .then(response => response.json())
-    //         .then((data) => {
-    //             let found = false;
-    //             data.forEach(element => {
-    //                 if (element.email === email) {
-    //                     found = true;
-    //                 }
-    //             });
-    //             setshow(found);
-    //         })
-    //         .catch((error) => console.error('Fetch error:', error));
-    // }, [email]);
+ 
      function handleSubmit(e) {
         var flag = true;
         e.preventDefault();
@@ -49,19 +36,30 @@ export default function SignUp() {  // Changed the function name to be consisten
 
     return (
         <div className="back-image">
-            <div className="pa">
-                <form className="forms" onSubmit={handleSubmit}>
-                    <h2 className='ff'>Login</h2>
-                    <label className='ff'>Email:</label>
-                    <input type="email" className='ff' id="email" onChange={he} /><br />
-                    <label className='ff'>Password:</label>
-                    <input type="password" className='ff' id="pass" onChange={(e) => setpassword(e.target.value)} /><br />
-                    {password.length < 8 && accept && (
-                        <p>Password must be greater than 8 characters</p>
-                    )}
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
+        <div className="pa">
+            <form className="forms" onSubmit={handleSubmit}>
+                <h2 className="ff">Login</h2>
+                <label className="ff" htmlFor="email">Email:</label>
+                <input
+                    type="email"
+                    className="ff input-field"
+                    id="email"
+                    onChange={handelemail}
+                />
+                <label className="ff" htmlFor="pass">Password:</label>
+                <input
+                    type="password"
+                    className="ff input-field"
+                    id="pass"
+                    onChange={(e) => setpassword(e.target.value)}
+                />
+                {password.length < 8 && accept && (
+                    <p className="error-message">Password must be greater than 8 characters</p>
+                )}
+                <input type="submit" value="Submit" className="submit-button" />
+            </form>
         </div>
+    </div>
+    
     );
 }

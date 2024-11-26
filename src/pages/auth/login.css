@@ -1,29 +1,100 @@
-.back-image{
-    background-image: url("./geometric-gradient-technology-background_23-2149110132.avif");
-    background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+/* General styles */
+.back-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./geometric-gradient-technology-background_23-2149110132.avif') no-repeat center center/cover;
+  padding: 20px;
 }
-.pa{
-    position: relative;
-    top: 100px;
-    left: 40%;
-    width: 20%;
-    min-height: 200px;
-    background-color: rgba(224, 224, 224, 0.7); 
-    border-radius: 30px;
-    box-shadow: 0  0 0 10px;
-    padding-bottom: 20px;
-  }
-  .forms{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .ff{
-    margin-bottom: 10px ;
+
+.pa {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ff {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-field {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-field:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pa {
+      padding: 20px;
   }
 
-  
+  .forms {
+      gap: 10px;
+  }
+
+  .ff {
+      font-size: 14px;
+  }
+
+  .submit-button {
+      font-size: 14px;
+      padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pa {
+      padding: 15px;
+  }
+
+  .ff {
+      font-size: 12px;
+  }
+
+  .submit-button {
+      font-size: 12px;
+      padding: 6px 8px;
+  }
+}
