@@ -18,18 +18,22 @@ function App() {
       <Nav />
       <Routes>
        
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/signup" element={<Signup />} /> */}
         <Route element={<Protect />}>
+        <Route path="/" element={<Movies />} />
+        <Route path="/:id" element={<Movieid />} />
+          {/* <Route path="movies" element={<Movies />} />
+          <Route path="movies/:id" element={<Movieid />} /> */}
           <Route path="movies" element={<Movies />} />
           <Route path="movies/:id" element={<Movieid />} />
-          <Route path="/series" element={<Series />} />
+          {/* <Route path="/series" element={<Series />} />
           <Route path="/series/:id" element={<Movieid />} />
           <Route path="/programming_tv" element={<Programming_tv />} />
           <Route path="/programming_tv/:id" element={<Movieid />} />
           <Route path="/animes" element={<Animes />} />
-          <Route path="/animes/:id" element={<Movieid />} />
+          <Route path="/animes/:id" element={<Movieid />} /> */}
         </Route>
       </Routes>
       <Footer />

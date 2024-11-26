@@ -29,11 +29,12 @@ export default function nav(){
         <nav className="navbar navbar-dark bg-dark">   
         <div className="container-fluid ">
             <div className="d-flex ">
-            <Link  to="/" className="navbar-brand nav-hover">Home</Link>
-            <Link  to="/movies" className="navbar-brand nav-hover">Movies</Link>
-            <Link  to="/series" className="navbar-brand nav-hover">Series</Link>
+            {/* <Link  to="/" className="navbar-brand nav-hover">Home</Link> */}
+            {/* <Link  to="/movies" className="navbar-brand nav-hover">Movies</Link> */}
+            <Link  to="/" className="navbar-brand nav-hover">Movies</Link> 
+            {/* <Link  to="/series" className="navbar-brand nav-hover">Series</Link>
             <Link  to="/programming_tv" className="navbar-brand nav-hover">Programming_TV</Link>
-            <Link  to="/animes" className="navbar-brand nav-hover">Animes</Link>
+            <Link  to="/animes" className="navbar-brand nav-hover">Animes</Link> */}
           </div>
           <form className="d-flex">
             <input className="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search"/>
